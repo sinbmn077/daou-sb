@@ -1,3 +1,3 @@
-<#import "layout/page.ftl" as page>
+<#import "layout/page_sales.ftl" as page>
 
 Index Pag

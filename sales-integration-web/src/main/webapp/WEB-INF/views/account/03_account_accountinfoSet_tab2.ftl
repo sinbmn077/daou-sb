@@ -16,11 +16,11 @@
 		
 		<!-- tab -->
 		<ul class="tab_d">
-			<li><a href="./03_account_accountinfoSet_tab1">정산정보현황</a></li>
+			<li><a href="./account_accountinfoSet_tab1">정산정보현황</a></li>
 			<li><a class="active">정산그룹관리</a></li>
-			<li><a href="./03_account_accountinfoSet_tab3">수기정산</a></li>
-			<li><a href="./03_account_accountinfoSet_tab4">기타매출</a></li>
-		</ul>		
+			<li><a href="./account_accountinfoSet_tab3">수기정산</a></li>
+			<li><a href="./account_accountinfoSet_tab4">기타매출</a></li>
+		</ul>	
 		<!-- //tab -->
 		
 		<!-- tab_정산그룹관리 -->
@@ -319,7 +319,7 @@
 		<!-- 하단 버튼 -->
 		<div class="btn_area mb_15 clr">
 			<a class="btn lg btn_blue" href="#">확인완료</a>
-			<a class="btn lg btn_gray" href="#">수정</a>
+			<a class="btn lg btn_gray" href="./popup_settleinfoModify">수정</a>
 		</div>
 		<!-- //하단 버튼 -->										
 		<!-- //입력된 정보 확인 -->

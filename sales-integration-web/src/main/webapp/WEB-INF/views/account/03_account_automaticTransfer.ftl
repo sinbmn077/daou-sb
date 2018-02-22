@@ -16,7 +16,7 @@
 		
 		<!-- button -->
 		<div class="align_r mb_15">
-			<a href="" class="btn md btn_gray">목록</a>
+			<a href="account_automaticTransfer_search" class="btn md btn_gray">목록</a>
 		</div> 
 		<!-- //button -->
 

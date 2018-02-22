@@ -20,17 +20,17 @@ public class SalesController {
     private static final Logger logs = LoggerFactory.getLogger(SalesController.class);
     
     //실적관리-실적조회
-    @GetMapping("01_sales_performanceAdmin_month")
+    @GetMapping("sales_performanceAdmin_month")
     String performanceAdmin_month(){
         return "/sales/01_sales_performanceAdmin_month";
     }
     //담보관리
-    @GetMapping("01_sales_pawn")
+    @GetMapping("sales_pawn")
     String pawn(){
         return "/sales/01_sales_pawn";
     }
     //실적관리-실적자료실
-    @GetMapping("01_sales_referenceRoom")
+    @GetMapping("sales_referenceRoom")
     String referenceRoom(){
         return "/sales/01_sales_referenceRoom";
     }

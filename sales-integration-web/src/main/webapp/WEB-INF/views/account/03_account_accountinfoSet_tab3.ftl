@@ -15,11 +15,11 @@
 		
 		<!-- tab -->
 		<ul class="tab_d">
-			<li><a href="./03_account_accountinfoSet_tab1">정산정보현황</a></li>
-			<li><a href="./03_account_accountinfoSet_tab2">정산그룹관리</a></li>
+			<li><a href="./account_accountinfoSet_tab1">정산정보현황</a></li>
+			<li><a href="./account_accountinfoSet_tab2">정산그룹관리</a></li>
 			<li><a class="active">수기정산</a></li>
-			<li><a href="./03_account_accountinfoSet_tab4">기타매출</a></li>
-		</ul>				
+			<li><a href="./account_accountinfoSet_tab4">기타매출</a></li>
+		</ul>		
 		<!-- //tab -->
 				
 		<!-- 검색 -->

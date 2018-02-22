@@ -3,6 +3,18 @@
 <#assign pageTitle='영업관리시스템 - 영어관리' />
 
 <@page.base pageTitle>
+<script>
+function detail(){
+	var x = document.getElementsByClassName("a_be");
+	for(var i =0;i<x.length;i++){
+	  if(x[i].innerHTML=="BBB"){
+	     x[i].href="account_salesAgency_detial";
+	   }	  
+	}
+
+}
+</script>
+
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -77,7 +89,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -87,7 +99,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -97,7 +109,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -107,7 +119,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -117,7 +129,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -127,7 +139,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -137,7 +149,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -147,7 +159,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -157,7 +169,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -167,7 +179,7 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>
@@ -177,7 +189,17 @@
 					<td><a href="" class="a_be">비즈뿌리오</a></td>
 					<td>1팀</td>
 					<td>김현진</td>
-					<td><a href="" class="a_be">AA_123</a></td>
+					<td><a href="" class="a_be" onclick="detail()">AA_123</a></td>
+					<td><a href="" class="a_be">관리자 ID</a></td>
+					<td>해당 월 발송량 합계</td>
+					<td>고객사 별 영어대행수수료</td>
+				</tr>	
+				<tr>
+					<td>2</td>
+					<td><a href="" class="a_be">유핏</a></td>
+					<td>2팀</td>
+					<td>윤수지</td>
+					<td><a href="" class="a_be" onclick="detail()">BBB</a></td>
 					<td><a href="" class="a_be">관리자 ID</a></td>
 					<td>해당 월 발송량 합계</td>
 					<td>고객사 별 영어대행수수료</td>

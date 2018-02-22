@@ -1,4 +1,4 @@
-<#import "/layout/page.ftl" as page>
+<#import "/layout/page_sales.ftl" as page>
 
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 영어관리' />

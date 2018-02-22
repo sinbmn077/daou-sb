@@ -1,9 +1,19 @@
 <#import "/layout/page_account.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#assign pageTitle='영업관리시스템 - 영어관리' />
+<#assign pageTitle='영업관리시스템 - 정산관리' />
 
 <@page.base pageTitle>
+<script>
+function detail(){
+	var x = document.getElementsByClassName("a_be");
+	for(var i =0;i<x.length;i++){
+	  if(x[i].innerHTML=="다우기술"||x[i].innerHTML=="123-45-6789"){
+	     x[i].href="account_accountinfoSet_tab1_detail";
+	   }	  
+	}
 
+}
+</script>
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -17,9 +27,9 @@
 		<!-- tab -->
 		<ul class="tab_d">
 			<li><a class="active">정산정보현황</a></li>
-			<li><a href="./03_account_accountinfoSet_tab2">정산그룹관리</a></li>
-			<li><a href="./03_account_accountinfoSet_tab3">수기정산</a></li>
-			<li><a href="./03_account_accountinfoSet_tab4">기타매출</a></li>
+			<li><a href="./account_accountinfoSet_tab2">정산그룹관리</a></li>
+			<li><a href="./account_accountinfoSet_tab3">수기정산</a></li>
+			<li><a href="./account_accountinfoSet_tab4">기타매출</a></li>
 		</ul>		
 		<!-- //tab -->	
 		
@@ -78,8 +88,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()" >다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()" >111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -92,8 +102,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -106,8 +116,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -120,8 +130,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -134,8 +144,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -148,8 +158,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -162,8 +172,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -176,8 +186,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -190,8 +200,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>
@@ -204,8 +214,8 @@
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be">다우기술</a></td>
-						<td><a href="" class="a_be">111-22-3333</a></td>
+						<td><a href="" class="a_be" onclick="detail()">다우</a></td>
+						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
 						<td>청구</td>
 						<td>익월</td>
 						<td>김현진</td>

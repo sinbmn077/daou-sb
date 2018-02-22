@@ -1,7 +1,12 @@
 <#-- baseTitle baseScript baseStyle -->
+<#-- <#assign salesUrl=["./sales_performanceAdmin_month", "./sales_referenceRoom", "./sales_pawn"]/>
+<#assign accountUrl=["./account_accountinfoSet_tab1","./account_prepayment_billSend",
+					"./account_postpay","./account_salesAgency","./account_refund",
+					"./account_automaticTransfer"]/>-->
 <#macro base baseTitle='영업관리시스템'
     baseScript='/include/common-script.ftl'
-    baseStyle='/include/common-style.ftl'>
+    baseStyle='/include/common-style.ftl'
+    >
 <!doctype html>
 <html lang="ko">
     <head>
@@ -44,8 +49,8 @@ $(function(){
 				<li><a href="#" class="nav_second">영업관리</a>                    
 					<ul class="sub">
 						<li></li>
-						<li><a href="#">실적관리</a></li>
-						<li><a href="#">담보관리</a></li>
+						<li><a href="./sales_performanceAdmin_month">실적관리</a></li>
+						<li><a href="./sales_referenceRoom">담보관리</a></li>
 					</ul>
 				</li>
 				<li><a href="#">고객관리</a>
@@ -64,12 +69,12 @@ $(function(){
 				<li><a href="#">정산관리</a>
 					<ul class="sub">
 						<li></li>
-						<li><a href="#">정산정보설정</a></li>
-						<li><a href="#">선불</a></li>
-						<li><a href="#">후불</a></li>
-						<li><a href="#">영업대행사</a></li>
-						<li><a href="#">환불</a></li>
-						<li><a href="#">자동이체</a></li>
+						<li><a href="./account_accountinfoSet_tab1">정산정보설정</a></li>
+						<li><a href="./account_prepayment_billSend">선불</a></li>
+						<li><a href="./account_postpay">후불</a></li>
+						<li><a href="./account_salesAgency">영업대행사</a></li>
+						<li><a href="./account_refund">환불</a></li>
+						<li><a href="./account_automaticTransfer">자동이체</a></li>
 					</ul>
 				</li>
 				<li><a href="#">매출/매입관리</a>
@@ -110,17 +115,17 @@ $(function(){
 	<!-- sidebar -->
 	<div class="sidebar">
 		<ul class="nav">
-			<li class="menu"><a href="./03_account_accountinfoSet_tab1">정산정보설정</a></li>
-			<li class="menu"><a href="./03_account_prepayment_billSend">선불<i></i></a>
+			<li class="menu"><a href="./account_accountinfoSet_tab1">정산정보설정</a></li>
+			<li class="menu"><a href="#">선불<i></i></a>
 				<ul class="nav_second">
-					<li><a href="./03_account_prepayment_billSend">선불 영수계산서 발행</a></li>
-					<li><a href="./03_account_prepayment_sales">선불 고객사 매출등록</a></li>
+					<li><a href="./account_prepayment_billSend">선불 영수계산서 발행</a></li>
+					<li><a href="./account_prepayment_sales">선불 고객사 매출등록</a></li>
 				</ul>
 			</li>
-			<li class="menu"><a href="./03_account_postpay_accountList_basic">후불</a></li>
-			<li class="menu"><a href="./03_account_salesAgency">영업대행사</a></li>
-			<li class="menu"><a href="./03_account_refund">환불</a></li>
-			<li class="menu"><a href="./03_account_automaticTransfer">자동이체</a></li>		
+			<li class="menu"><a href="./account_postpay">후불</a></li>
+			<li class="menu"><a href="./account_salesAgency">영업대행사</a></li>
+			<li class="menu"><a href="./account_refund">환불</a></li>
+			<li class="menu"><a href="./account_automaticTransfer">자동이체</a></li>		
 			<li class="menu"><a href="#">여신관리</a></li>			
 		</ul>
 	</div> 

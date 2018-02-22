@@ -1,6 +1,6 @@
 <#import "/layout/page_account.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#assign pageTitle='영업관리시스템 - 영어관리' />
+<#assign pageTitle='영업관리시스템 - 정산관리' />
 
 <@page.base pageTitle>
 
@@ -18,17 +18,17 @@
 		<!-- tab -->
 		<ul class="tab_d">
 			<li><a class="active">정산정보현황</a></li>
-			<li><a>정산그룹관리</a></li>
-			<li><a>수기정산</a></li>
-			<li><a>기타매출</a></li>
-		</ul>		
+			<li><a href="./account_accountinfoSet_tab2">정산그룹관리</a></li>
+			<li><a href="./account_accountinfoSet_tab3">수기정산</a></li>
+			<li><a href="./account_accountinfoSet_tab4">기타매출</a></li>
+		</ul>
 		<!-- //tab -->
 		
 		<div>
 			<h4 class="f_l">[<b>다우기술</b> 정산정보 상세]</h4>
 			<!-- button -->
 			<div class="align_r mt_15">
-				<a href="" class="btn md btn_gray">목록</a>
+				<a href="./account_accountinfoSet_tab1" class="btn md btn_gray">목록</a>
 			</div>
 			<!-- //button -->			
 		</div>

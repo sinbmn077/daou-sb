@@ -20,83 +20,92 @@ public class AcountController {
     private static final Logger logs = LoggerFactory.getLogger(AcountController.class);
     
     //정산정보설정-정산정보현황
-    @GetMapping("03_account_accountinfoSet_tab1")
+    @GetMapping("account_accountinfoSet_tab1")
     String accountinfoSet_tab1(){
         return "/account/03_account_accountinfoSet_tab1";
     }
-    //담보관리
-    @GetMapping("03_account_accountinfoSet_tab1_detail")
+    //정산정보설정-정산정보현황-다우기술
+    @GetMapping("account_accountinfoSet_tab1_detail")
     String accountinfoSet_tab1_detail(){
         return "/account/03_account_accountinfoSet_tab1_detail";
     }
-    //정산정보서정-정산그룹관리
-    @GetMapping("03_account_accountinfoSet_tab2")
+    //정산정보설정-정산그룹관리
+    @GetMapping("account_accountinfoSet_tab2")
     String accountinfoSet_tab2(){
         return "/account/03_account_accountinfoSet_tab2";
     }
-    @GetMapping("03_account_accountinfoSet_tab2_detail")
+    @GetMapping("account_accountinfoSet_tab2_detail")
     String accountinfoSet_tab2_detail(){
         return "/account/03_account_accountinfoSet_tab2_detail";
     }
     //정산정보설정-수기정산
-    @GetMapping("03_account_accountinfoSet_tab3")
+    @GetMapping("account_accountinfoSet_tab3")
     String accountinfoSet_tab3(){
         return "/account/03_account_accountinfoSet_tab3";
     }  
     //정산정보설정-기타매출
-    @GetMapping("03_account_accountinfoSet_tab4")
+    @GetMapping("account_accountinfoSet_tab4")
     String accountinfoSet_tab4(){
         return "/account/03_account_accountinfoSet_tab4";
     }   
-    @GetMapping("03_account_automaticTransfer_search")
+    //자동이체 -목록
+    @GetMapping("account_automaticTransfer_search")
     String automaticTransfer_serarch(){
         return "/account/03_account_automaticTransfer_search";
     }    
-    @GetMapping("03_account_automaticTransfer")
+    //자동이체
+    @GetMapping("account_automaticTransfer")
     String automaticTransfer(){
         return "/account/03_account_automaticTransfer";
     }   
-    @GetMapping("03_account_postpay_accountList_basic")
+    
+    @GetMapping("account_postpay_accountList_basic")
     String postpay_accountList_basic(){
         return "/account/03_account_postpay_accountList_basic";
     }
-    @GetMapping("03_account_postpay_accountList_detail")
+    @GetMapping("account_postpay_accountList_detail")
     String postpay_accountList_detail(){
         return "/account/03_account_postpay_accountList_detail";
     }
-    @GetMapping("03_account_postpay_accountList_group")
+    @GetMapping("account_postpay_accountList_group")
     String postpay_accountList_group(){
         return "/account/03_account_postpay_accountList_group";
     }
-    @GetMapping("03_account_postpay_accountList_hand")
+    @GetMapping("account_postpay_accountList_hand")
     String postpay_accountList_hand(){
         return "/account/03_account_postpay_accountList_hand";
     }
-    @GetMapping("03_account_postpay_correctHistory")
+    @GetMapping("account_postpay_correctHistory")
     String postpay_correctHistory(){
         return "/account/03_account_postpay_correctHistory";
     }
-    @GetMapping("03_account_postpay")
+    //후불
+    @GetMapping("account_postpay")
     String postpay(){
         return "/account/03_account_postpay";
     }
-    @GetMapping("03_account_prepayment_billSend")
+    //선불-영수계산서 발행
+    @GetMapping("account_prepayment_billSend")
     String prepayment_billSend(){
         return "/account/03_account_prepayment_billSend";
     }   
-    @GetMapping("03_account_prepayment_sales")
+    //선불-고객사매출등록
+    @GetMapping("account_prepayment_sales")
     String prepayment_sales(){
         return "/account/03_account_prepayment_sales";
     }    
-    @GetMapping("03_account_refund")
+    //환불
+    @GetMapping("account_refund")
     String refund(){
         return "/account/03_account_refund";
     }   
-    @GetMapping("03_account_salesAgency")
+    //영업대행사
+    @GetMapping("account_salesAgency")
     String salesAgency(){
         return "/account/03_account_salesAgency";
     }   
-    @GetMapping("03_account_salesAgency_detial")
+    //영업대행사-BBB
+    @GetMapping("account_salesAgency_detial")
     String salesAgency_detial(){
         return "/account/03_account_salesAgency_detial";
     }
