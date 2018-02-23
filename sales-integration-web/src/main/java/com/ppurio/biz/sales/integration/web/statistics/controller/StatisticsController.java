@@ -19,5 +19,23 @@ public class StatisticsController {
     
     private static final Logger logs = LoggerFactory.getLogger(StatisticsController.class);
     
+    //실적관리-실적조회
+    @GetMapping("statistics_accountStatistics")
+    String accountStatistics(){
+        return "/statistics/05_statistics_accountStatistics";
+    }
+    //담보관리
+    @GetMapping("statistics_lineStatistics")
+    String lineStatistics(){
+        return "/statistics/05_statistis_lineStatistics";
+    }
+    @GetMapping("statistics_sendlistSearch")
+    String sendlistSearch(){
+        return "/statistics/05_statistis_sendlistSearch";
+    }
+    @GetMapping("statistics_sendWatch")
+    String sendWatch(){
+        return "/statistics/05_statistis_sendWatch";
+    }
 
 }

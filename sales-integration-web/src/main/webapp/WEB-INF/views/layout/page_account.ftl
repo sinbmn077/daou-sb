@@ -80,10 +80,10 @@ $(function(){
 				<li><a href="#">매출/매입관리</a>
 					<ul class="sub">
 						<li></li>
-						<li><a href="#">매출조회</a></li>
-						<li><a href="#">선수수익관리</a></li>
-						<li><a href="#">영업대행사 매출</a></li>
-						<li><a href="#">매입관리</a></li>
+						<li><a href="./purchase_referance">매출조회</a></li>
+						<li><a href="./purchase_revenueManagement">선수수익관리</a></li>
+						<li><a href="./purchase_agencysalesManagement">영업대행사 매출</a></li>
+						<li><a href="./purchase_purchaseSearch">매입관리</a></li>
 					</ul>
 				</li>
 				<li><a href="#">통계</a>

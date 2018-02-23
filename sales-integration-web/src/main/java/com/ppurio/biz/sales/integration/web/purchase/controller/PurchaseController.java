@@ -19,6 +19,49 @@ public class PurchaseController {
     
     private static final Logger logs = LoggerFactory.getLogger(PurchaseController.class);
     
-  
+    //매출,매입관리-영업대행사 매출
+    @GetMapping("purchase_agencysalesManagement")
+    String agencysalesManagement(){
+        return "/purchase/04_purchase_agencysalesManagement";
+    }
+    //매출,매입관리-매출조회-상세보기
+    @GetMapping("purchase_itemsearchResult")
+    String itemsearchResult(){
+        return "/purchase/04_purchase_itemsearchResult";
+    }
+    //매출매입관리-매입관리-매입대사
+    @GetMapping("purchase_purchaseList")
+    String purchaseList(){
+        return "/purchase/04_purchase_purchaseList";
+    }
+   //매출매입관리-매입관리-예상매입조회
+    @GetMapping("purchase_purchaseSearch")
+    String purchaseSearch(){
+        return "/purchase/04_purchase_purchaseSearch";
+    }
+    //매출,매입관리-매출조회-고객사명이 (주)제주어쩌고 일때만
+    @GetMapping("purchase_referance_postpayDetail")
+    String referance_postpayDetail(){
+        return "/purchase/04_purchase_referance_postpayDetail";
+    }
+    @GetMapping("purchase_referance_prepaymDetail")
+    String referance_prepaymDetail(){
+        return "/purchase/04_purchase_referance_prepaymDetail";
+    }
+    //매출,매입관리-매출조회
+    @GetMapping("purchase_referance")
+    String referance(){
+        return "/purchase/04_purchase_referance";
+    }
+    @GetMapping("purchase_revenueManagement_confirm")
+    String revenueManagement_confirm(){
+        return "/purchase/04_purchase_revenueManagement_confirm";
+    }
+    //매출,매입관리-선수수익관리
+    @GetMapping("purchase_revenueManagement")
+    String revenueManagement(){
+        return "/purchase/04_purchase_revenueManagement";
+    }
+
 
 }
