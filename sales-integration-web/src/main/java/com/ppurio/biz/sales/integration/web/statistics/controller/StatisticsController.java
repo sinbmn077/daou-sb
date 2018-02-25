@@ -27,15 +27,15 @@ public class StatisticsController {
     //담보관리
     @GetMapping("statistics_lineStatistics")
     String lineStatistics(){
-        return "/statistics/05_statistis_lineStatistics";
+        return "/statistics/05_statistics_lineStatistics";
     }
     @GetMapping("statistics_sendlistSearch")
     String sendlistSearch(){
-        return "/statistics/05_statistis_sendlistSearch";
+        return "/statistics/05_statistics_sendlistSearch";
     }
     @GetMapping("statistics_sendWatch")
     String sendWatch(){
-        return "/statistics/05_statistis_sendWatch";
+        return "/statistics/05_statistics_sendWatch";
     }
 
 }

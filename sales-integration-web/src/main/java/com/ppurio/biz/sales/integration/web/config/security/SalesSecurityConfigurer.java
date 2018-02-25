@@ -17,6 +17,7 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 
 /**
  *
@@ -38,7 +39,19 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
     @Resource
     private SalesLogoutSuccessHandler logoutSuccessHandler;
-
+    
+    @Override
+    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+        // @formatter:off
+        auth.inMemoryAuthentication()
+        .passwordEncoder(NoOpPasswordEncoder.getInstance())
+        .withUser("user1").password("dltnqls").roles("USER")
+        .and()
+        .withUser("user2").password("{noop}user2Pass").roles("USER")
+        .and()
+        .withUser("admin").password("{noop}adminPass").roles("ADMIN");
+    }
+    
     @Override
     public void configure(WebSecurity web) throws Exception {
         /**

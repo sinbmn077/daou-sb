@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>팝업_금액 보정하기</title>
-<link rel="stylesheet" type="text/css" href="../css/sales.css" />
+<link rel="stylesheet" type="text/css" href="./css/sales.css" />
 </head>
 
 <body>

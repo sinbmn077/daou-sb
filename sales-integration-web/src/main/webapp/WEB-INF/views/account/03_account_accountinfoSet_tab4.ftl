@@ -42,7 +42,7 @@
 		
 		<!-- 버튼 -->
 		<div class="box mb_10 align_l">
-			<a href="" class="btn md btn_blue">신규 입력</a>
+			<a href="./popup_etcpurchaseInput" target="_blank" class="btn md btn_blue">신규 입력</a>
 			<a href="" class="btn md btn_gray">삭제</a>
 		</div>
 		<!-- 버튼 -->
@@ -259,7 +259,7 @@
 		
 		<!-- 버튼 -->
 		<div class="box mb_10 align_l">
-			<a href="" class="btn md btn_blue">신규 입력</a>
+			<a href="./popup_etcsalesInput" target="_blank" class="btn md btn_blue">신규 입력</a>
 			<a href="" class="btn md btn_gray">삭제</a>
 		</div>
 		<!-- 버튼 -->
@@ -531,8 +531,8 @@
 					<tr>
 						<th>보정금액</th>
 						<td colspan="3">
-							<a href="" class="btn_vsm"><span class="ico_plus">+</span></a>
-							<a href="" class="btn_vsm mr_3"><span class="ico_minus">-</span></a>
+							<a href="./popup_amountMoney" target="_blank" class="btn_vsm"><span class="ico_plus">+</span></a>
+							<a href="./popup_amountMoney" target="_blank" class="btn_vsm mr_3"><span class="ico_minus">-</span></a>
 							<input type="text" class="w150" placeholder="보정금액 입력">
 						</td>
 					</tr>

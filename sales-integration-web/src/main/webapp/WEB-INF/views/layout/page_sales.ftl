@@ -84,10 +84,10 @@ $(function(){
 				<li><a href="#">통계</a>
 					<ul class="sub">
 						<li></li>
-						<li><a href="#">계정별 발송통계</a></li>
-						<li><a href="#">라인별 발송현황</a></li>
-						<li><a href="#">발송추이</a></li>
-						<li><a href="#">발송내역 조회</a></li>                            
+						<li><a href="./statistics_accountStatistics">계정별 발송통계</a></li>
+						<li><a href="./statistics_lineStatistics">라인별 발송현황</a></li>
+						<li><a href="./statistics_sendWatch">발송추이</a></li>
+						<li><a href="./statistics_sendlistSearch">발송내역 조회</a></li>                            
 					</ul>
 				</li>
 				<li><a href="#">기타</a>

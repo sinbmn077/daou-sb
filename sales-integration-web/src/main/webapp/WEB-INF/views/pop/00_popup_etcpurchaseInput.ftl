@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>기타매출입력</title>
-<link rel="stylesheet" type="text/css" href="../css/sales.css" />
+<link rel="stylesheet" type="text/css" href="./css/sales.css" />
 </head>
 
 <body>

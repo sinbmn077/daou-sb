@@ -23,11 +23,11 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry
                 .addInterceptor(new CommonInterceptor())
-                .addPathPatterns("account_accountinfoSet_tab1");
+                .addPathPatterns("login.do");
     }
     @Override
     public void addViewControllers(ViewControllerRegistry registry ) {
-        registry.addViewController( "/" ).setViewName( "forward:/account_accountinfoSet_tab1" );
+        registry.addViewController( "/" ).setViewName( "forward:/login.do" );
         registry.setOrder( Ordered.HIGHEST_PRECEDENCE );
        // super.addViewControllers( registry );
     }

@@ -11,8 +11,15 @@ function detail(){
 	     x[i].href="account_accountinfoSet_tab1_detail";
 	   }	  
 	}
-
 }
+</script>
+<script>
+function delete(){
+	var x = document.getElementsByClassName("btn md btn_gray");	
+	x[0].href="account_accountinfoSet_tab1?index=1"
+}
+
+
 </script>
     <!-- contents -->
     <div class="container_r">    
@@ -48,7 +55,7 @@ function detail(){
 		
 		<!-- button -->
 		<div class="align_l mb_10">
-			<a href="" class="btn md btn_gray">삭제</a>
+			<a href="" class="btn md btn_gray" onclick= "delete()" >삭제</a>
 		</div>
 		<!-- //button -->		
 		
@@ -85,9 +92,10 @@ function detail(){
 					</tr>
 				</thead>
 				<tbody>
+						<#list welcomeMap.key3 as x3>
 					<tr>
 						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
+						<td>${x3}</td>
 						<td><a href="" class="a_be" onclick="detail()" >다우기술</a></td>
 						<td><a href="" class="a_be" onclick="detail()" >111-22-3333</a></td>
 						<td>청구</td>
@@ -99,6 +107,7 @@ function detail(){
 						<td><a href="" class="btn_sm_blue">생성</a></td>
 						<td>2018.12.25</td>
 					</tr>
+					</#list>
 					<tr>
 						<td><input type="checkbox"></td>
 						<td>비즈뿌리오</td>
