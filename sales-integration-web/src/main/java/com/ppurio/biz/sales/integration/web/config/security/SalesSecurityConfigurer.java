@@ -45,11 +45,7 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
         // @formatter:off
         auth.inMemoryAuthentication()
         .passwordEncoder(NoOpPasswordEncoder.getInstance())
-        .withUser("user1").password("dltnqls").roles("USER")
-        .and()
-        .withUser("user2").password("{noop}user2Pass").roles("USER")
-        .and()
-        .withUser("admin").password("{noop}adminPass").roles("ADMIN");
+        .withUser("user1").password("dltnqls").roles("USER");
     }
     
     @Override
