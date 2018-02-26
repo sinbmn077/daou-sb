@@ -1,8 +1,8 @@
-<#import "/layout/page_account.ftl" as page>
+<#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#assign pageTitle='영업관리시스템 - 영어관리' />
+<#assign pageTitle='영업관리시스템 - 정산관리' />
+<@page.account pageTitle>
 
-<@page.base pageTitle>
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -200,4 +200,4 @@
 	<!-- //contents -->
 </body>
 </html>
-	</@page.base>
+	</@page.account>

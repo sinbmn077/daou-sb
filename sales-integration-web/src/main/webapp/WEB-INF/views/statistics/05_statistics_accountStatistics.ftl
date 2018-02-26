@@ -1,8 +1,7 @@
-<#import "/layout/page_statistics.ftl" as page>
-
+<#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
-<#assign pageTitle='영업관리시스템 - 매출/매입관리' />
-<@page.base pageTitle>
+<#assign pageTitle='영업관리시스템 - 통계' />
+<@page.statistics pageTitle>
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -454,4 +453,4 @@
 		<!-- //paging -->
 	</div>
 	<!-- //contents -->
-	</@page.base>
+	</@page.statistics>

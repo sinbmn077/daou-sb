@@ -1,8 +1,8 @@
-<#import "/layout/page_purchase.ftl" as page>
-
+<#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 매출/매입관리' />
-<@page.base pageTitle>
+<@page.purchase pageTitle>
+
 <script>
 function detail(){
 	var x = document.getElementsByClassName("a_be");
@@ -274,5 +274,5 @@ function detail(){
 		<!-- //paging -->				
 	</div>
 	<!-- //contents -->
-	</@page.base>
+	</@page.purchase>
 

@@ -8,6 +8,7 @@ package com.ppurio.biz.sales.integration.web.account.controller;
 import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Vector;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ppurio.biz.sales.integration.web.login.controller.LoginController;
+
 /**
  *
  * @author leesh04@daou.co.kr
@@ -26,21 +29,44 @@ import org.springframework.web.servlet.ModelAndView;
 public class AcountController {
     
     private static final Logger logs = LoggerFactory.getLogger(AcountController.class);
-    
+    private static boolean ch=true;
     //정산정보설정-정산정보현황
     @GetMapping("account_accountinfoSet_tab1")
-    public ModelAndView test(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    String accountinfoSet_tab1(){
+        return "/account/03_account_accountinfoSet_tab1";
+    }
+    /*public ModelAndView test(HttpServletRequest request, HttpServletResponse response) throws Exception {
     	String s = request.getParameter("index");
-    	logs.info(s);
-    	HashMap map = new HashMap();
-    	  ArrayList list = new ArrayList();
-    	  list.add("list1");
-    	  list.add("list2");
-    	  list.add("list3");
-    	  list.add("list4");
-    	  map.put("key3",list);
-    	  return new ModelAndView("/account/03_account_accountinfoSet_tab1","welcomeMap",map);
+    	logs.info(s+ch);
+    	HashMap map = null;  
+    	Vector list = null;
+    	if(ch==true) {
+    	  	  map = new HashMap();
+    	  	  list = new Vector();  
+    		  list.add("list1");
+    		  list.add("list2");
+    		  list.add("list3");
+    		  list.add("list4");
+    		  map.put("key3",list);
     	 }
+      	if(s!=null) {
+          	ch=false;
+      		int cnt=0,bin=0;
+          	int a[]= new int[100];
+          	for(int i=0;i<s.length();i++) {
+          		if(s.charAt(i)=='/') {
+          			a[cnt++]=Integer.parseInt(s.substring(bin, i));
+          			bin=i+1;
+          		}
+          	}
+          	for(int i=0;i<cnt;i++) {
+          		list.remove(a[i]-1);
+          	}
+      	}
+    	  map.put("key3", list);
+    	  
+    	  return new ModelAndView("/account/03_account_accountinfoSet_tab1","welcomeMap",map);
+    	 }*/
     
     
     //정산정보설정-정산정보현황-다우기술

@@ -1,26 +1,19 @@
-<#import "/layout/page_account.ftl" as page>
+<#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 정산관리' />
-
-<@page.base pageTitle>
+<@page.account pageTitle>
 <script>
 function detail(){
 	var x = document.getElementsByClassName("a_be");
 	for(var i =0;i<x.length;i++){
-	  if(x[i].innerHTML=="다우기술"||x[i].innerHTML=="123-45-6789"){
+	  if(x[i].innerHTML=="다우기술"){
 	     x[i].href="account_accountinfoSet_tab1_detail";
 	   }	  
 	}
+
 }
 </script>
-<script>
-function delete(){
-	var x = document.getElementsByClassName("btn md btn_gray");	
-	x[0].href="account_accountinfoSet_tab1?index=1"
-}
 
-
-</script>
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -55,12 +48,12 @@ function delete(){
 		
 		<!-- button -->
 		<div class="align_l mb_10">
-			<a href="" class="btn md btn_gray" onclick= "delete()" >삭제</a>
+			<a href="" class="btn md btn_gray" onclick="del()" >삭제nn</a>
 		</div>
 		<!-- //button -->		
 		
 		<!-- 검색결과 list table -->
-			<table class="tb_list_b">
+			<table class="tb_list_b" id = "tab_b">
 				<colgroup>
 					<col style="width:50px">
 					<col style="width:100px">
@@ -92,10 +85,10 @@ function delete(){
 					</tr>
 				</thead>
 				<tbody>
-						<#list welcomeMap.key3 as x3>
+				<@page.table count=10 number=1>
 					<tr>
 						<td><input type="checkbox"></td>
-						<td>${x3}</td>
+						<td>비즈뿌리오</td>
 						<td><a href="" class="a_be" onclick="detail()" >다우기술</a></td>
 						<td><a href="" class="a_be" onclick="detail()" >111-22-3333</a></td>
 						<td>청구</td>
@@ -107,151 +100,12 @@ function delete(){
 						<td><a href="" class="btn_sm_blue">생성</a></td>
 						<td>2018.12.25</td>
 					</tr>
-					</#list>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우기술</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>
-					<tr>
-						<td><input type="checkbox"></td>
-						<td>비즈뿌리오</td>
-						<td><a href="" class="a_be" onclick="detail()">다우</a></td>
-						<td><a href="" class="a_be" onclick="detail()">111-22-3333</a></td>
-						<td>청구</td>
-						<td>익월</td>
-						<td>김현진</td>
-						<td>기본</td>
-						<td>-</td>
-						<td><a href="" class="btn_sm_skyBlue">수정</a></td>
-						<td><a href="" class="btn_sm_blue">생성</a></td>
-						<td>2018.12.25</td>
-					</tr>				
-				</tbody>
-			</table>
+				</@page.table>
+					
+			</tbody>
+		</table>
 		
-		<!-- paging -->
-		<div class="paging_b mb_15">
-			<span>
-				<button title="처음페이지" class="first" type="button">&lt;&lt;</button>
-				<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
-			</span>
-			<span class="page">
-				<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
-			</span>
-			<span>       
-				<button title="다음 10페이지" class="next" type="button">&gt;</button>
-				<button title="마지막페이지" class="last" type="button">&gt;&gt;</button>
-			</span>
-		</div> 		
-		<!-- //paging -->
+		<@page.paging></@page.paging>
 		<!-- //검색결과 list table -->
 		
 		<!-- 검색결과 (없을 시) list table -->
@@ -296,5 +150,5 @@ function delete(){
 		<!--  //tab_정산정보현황 -->
 	</div>
 	<!-- //contents -->
-	</@page.base>
+	</@page.account>
 

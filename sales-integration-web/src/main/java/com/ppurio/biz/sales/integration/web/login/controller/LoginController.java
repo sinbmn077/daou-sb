@@ -23,11 +23,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class LoginController {
+	public boolean accountinfoSet_tab1=true;
     
     private static final Logger logs = LoggerFactory.getLogger(LoginController.class);
     //01 로그인화면
     @GetMapping("/login.do")
     String login(){
+    	 logs.info("==> 로그인두");
+    	 
+        return "/login/form";
+    }
+    @GetMapping("/logout.do")
+    String logout(){
     	 logs.info("==> 로그인두");
     	 
         return "/login/form";
