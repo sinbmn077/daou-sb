@@ -1,14 +1,7 @@
 <#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 정산관리' />
-<#assign num =1/>
 <@page.account pageTitle>
-<script>
-function detail(){
-  ${num}=location.innerHTML;
-}
-</script>
-
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -109,32 +102,8 @@ function detail(){
 		<!-- //button -->	
 		
 		<!-- 계산서 발행 내역이 있는 경우 -->
-		<table class="tb_list_b mt_15">
-			<colgroup>
-				<col style="width:6.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:15.5%">
-				<col style="width:15.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-			</colgroup>
-			<thead>
-				<tr>
-					<th>No.</th>
-					<th>계산서발행일</th>
-					<th>고객사 명</th>
-					<th>사업자번호</th>
-					<th>판매금액</th>
-					<th>부가세</th>
-					<th>합계금액</th>
-					<th>비고</th>
-				</tr>
-			</thead>
-			
-			<tbody>
-			<@page.table count=10 number=num>
+	   <@page.table count=10 col_group=['6.5','12.5','12.5','12.5','15.5','15.5','12.5','12.5'] 
+		    thead=['계산서발행일','고객사 명','사업자번호','판매금액','부가세','합계금액','비고'] number=1>
 			   <tr>
 					<td>1234</td>
 					<td>2017.12.22</td>
@@ -146,41 +115,12 @@ function detail(){
 					<td>-</td>
 				</tr>
 			</@page.table>
-					
-			</tbody>
-		</table>
 		<@page.paging></@page.paging>
 		
 		<!-- 계산서 발행 내역이 없는 경우 -->
-		<table class="tb_list_b mt_15">
-			<colgroup>
-				<col style="width:6.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-				<col style="width:15.5%">
-				<col style="width:15.5%">
-				<col style="width:12.5%">
-				<col style="width:12.5%">
-			</colgroup>
-			<thead>
-				<tr>
-					<th>No.</th>
-					<th>계산서발행일</th>
-					<th>고객사 명</th>
-					<th>사업자번호</th>
-					<th>판매금액</th>
-					<th>부가세</th>
-					<th>합계금액</th>
-					<th>비고</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td colspan="8">계산서 발행 내역이 없습니다.</td>
-				</tr>
-			</tbody>
-		</table>		
+	    <@page.table count=10 col_group=['6.5','12.5','12.5','12.5','15.5','15.5','12.5','12.5'] 
+		    thead=['계산서발행일','고객사 명','사업자번호','판매금액','부가세','합계금액','비고'] number=2>
+		</@page.table>	
 		<!-- //계산서 발행 내역이 없는 경우 -->						
 	</div>
 	<!-- //contents -->

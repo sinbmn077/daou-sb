@@ -138,19 +138,44 @@
         <#nested />
     </@base>
 </#macro>
+					
+<#macro list title items>
+  <p>${title?cap_first}:
+  <ul>
+    <#list items as x>
+      <li>${x?cap_first}
+    </#list>
+  </ul>
+</#macro>
 
-
-<#macro table count number>
-  <#if number==1>
-  	<#list 1..count as x>
+<#macro table count col_group thead number>
+	<table class="tb_list_b" id = "tab_b">
+	   <colgroup>
+  	   <#list col_group as col>
+  	   	  <col style="width:${col}px">
+  	   </#list>
+  	   </colgroup>
+	   <thead>
+		 <tr>
+		 <th><input type="checkbox"></th>
+		 <#list thead as th>
+		 	<th>${th}</th>
+		 </#list>
+		 </tr>
+	   </thead>
+	   <tbody>
+	<#if number==1>
+	    <#list 1..count as x>
     	<#nested />
    		<#assign x = x+1?int> 
- 	</#list>
-  <#else>
-  	<tr>
-		<td colspan="12">검색 결과가 없습니다.</td>
-	</tr>
-  </#if>
+  	    </#list>
+  	<#else>
+  		<tr>
+			<td colspan="12">검색 결과가 없습니다.</td>
+		</tr>	
+  	</#if>
+  	</tbody>
+   </table>
 </#macro>
 
 <#macro paging>
