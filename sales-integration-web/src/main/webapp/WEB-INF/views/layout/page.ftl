@@ -138,21 +138,12 @@
         <#nested />
     </@base>
 </#macro>
-					
-<#macro list title items>
-  <p>${title?cap_first}:
-  <ul>
-    <#list items as x>
-      <li>${x?cap_first}
-    </#list>
-  </ul>
-</#macro>
 
-<#macro table count col_group thead number>
-	<table class="tb_list_b" id = "tab_b">
+<#--"tb_list_b"-->
+<#macro table count  thead number>
 	   <colgroup>
-  	   <#list col_group as col>
-  	   	  <col style="width:${col}px">
+  	   <#list thead as col>
+  	   	  <col style="width: px">
   	   </#list>
   	   </colgroup>
 	   <thead>
@@ -171,13 +162,12 @@
   	    </#list>
   	<#else>
   		<tr>
-			<td colspan="12">검색 결과가 없습니다.</td>
+			<td colspan=${count}>검색 결과가 없습니다.</td>
 		</tr>	
   	</#if>
   	</tbody>
-   </table>
 </#macro>
-
+	
 <#macro paging>
    <div class="paging_b">
 	<span>
@@ -198,7 +188,45 @@
 	</div> 		
 </#macro>
 
+<#--1. 검색, 2.조회 -->
+<#macro box_grey number ph>
+	<div class="box_grey box_search">
+	<#if number=1>
+  		<div class="form_group align_c">
+  		<#nested>
+  		<input type="text" class="w200" placeholder="검색 내용 입력">
+		<a href="" class="btn_sm_sch_black r3">검색</a>
+		</div>
+	<#else>
+		<p class="align_c">
+		<input type="text" class="w300" placeholder=${ph}>
+		<a href="" class="btn_sm_sch_black r3">조회</a>
+		</p>
+	</#if>	
+	</div>	
+</#macro>	
 
+<#-- account페이지 tab  -->			
+<#macro account_tab_d>			
+	<ul class="tab_d">
+	   <li><a href="./account_accountinfoSet_tab1">정산정보현황</a></li>
+	   <li><a href="./account_accountinfoSet_tab2">정산그룹관리</a></li>
+	   <li><a href="./account_accountinfoSet_tab3">수기정산</a></li>
+	   <li><a href="./account_accountinfoSet_tab4">기타매출</a></li>
+	</ul>
+</#macro>
 
+<#-- title -->	
+ <#macro title mainti hr_ti ti hr_subti subti>   
+    <div class="title_b">
+    	<em></em>
+    	<h2>${mainti}</h2>
+		<blockquote class="txt_bul_bar"><a href="./account_accountinfoSet_tab1">홈</a> > <a href=${hr_ti}>${ti}</a> > <a href=${hr_subti}>${subti}</a></blockquote>
+	</div>
+</#macro>
+<#-- button -->
+<#macro button class text>
+  <a href="" class="${class}" >${text}</a>
+</#macro>
 
 

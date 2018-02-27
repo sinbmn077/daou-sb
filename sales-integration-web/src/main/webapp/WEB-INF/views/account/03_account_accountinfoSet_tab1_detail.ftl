@@ -1,6 +1,7 @@
 <#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 정산관리' />
+<#assign th=['No.','계산서발행일','고객사 명','사업자번호','판매금액','부가세','합계금액','비고']/>
 <@page.account pageTitle>
     <!-- contents -->
     <div class="container_r">    
@@ -102,9 +103,10 @@
 		<!-- //button -->	
 		
 		<!-- 계산서 발행 내역이 있는 경우 -->
-	   <@page.table count=10 col_group=['6.5','12.5','12.5','12.5','15.5','15.5','12.5','12.5'] 
-		    thead=['계산서발행일','고객사 명','사업자번호','판매금액','부가세','합계금액','비고'] number=1>
+	   <table class="tb_list_b">
+	   <@page.table count=10 thead=th number=1>
 			   <tr>
+					<td><input type="checkbox"></td>
 					<td>1234</td>
 					<td>2017.12.22</td>
 					<td>(주)다우기술</td>
@@ -115,12 +117,15 @@
 					<td>-</td>
 				</tr>
 			</@page.table>
+		</table>	
+		
 		<@page.paging></@page.paging>
 		
 		<!-- 계산서 발행 내역이 없는 경우 -->
-	    <@page.table count=10 col_group=['6.5','12.5','12.5','12.5','15.5','15.5','12.5','12.5'] 
-		    thead=['계산서발행일','고객사 명','사업자번호','판매금액','부가세','합계금액','비고'] number=2>
-		</@page.table>	
+	    <table class="tb_list_b">
+		<@page.table count=9 thead= th number=2>
+		</@page.table>
+		</table>	
 		<!-- //계산서 발행 내역이 없는 경우 -->						
 	</div>
 	<!-- //contents -->

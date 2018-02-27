@@ -1,6 +1,7 @@
 <#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 정산관리' />
+<#assign th = ['서비스','정산연월','고객사명','사업자번호','정산주기','정/역발행','기타매출','담당자','정산완료여부','vat별도가','vat포함가','정산완료일자','정산담당자']/>
 <@page.account pageTitle>
     <!-- contents -->
     <div class="container_r">    
@@ -47,41 +48,7 @@
 		<!-- //버튼 -->
 				
 		<table class="tb_list_b"> 
-			<colgroup>
-				<col style="width:4%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:10%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-			</colgroup>
-			<thead>
-				<tr>
-					<th><input type="checkbox"></th>
-					<th>서비스</th>
-					<th>정산연월</th>
-					<th>고객사명</th>
-					<th>사업자번호</th>
-					<th>정산주기</th>
-					<th>정/역발행</th>
-					<th>기타매출</th>
-					<th>담당자</th>
-					<th>정산완료여부</th>
-					<th>vat별도가</th>
-					<th>vat포함가</th>
-					<th>정산완료일자</th>
-					<th>정산담당자</th>
-				</tr>
-			</thead>
-			<tbody>
+			<@page.table count=6 thead=th number=1>
 				<tr>
 					<td><input type="checkbox"></td>
 					<td>유핏</td>
@@ -98,210 +65,17 @@
 					<td>2017-09-23</td>
 					<td>하하하</td>
 				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td><span class="red">미완료</span></td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td>완료<a href="" class="btn_sm_skyBlue ml_3">수정</a></td>
-					<td>공급가</td>
-					<td>판매가</td>
-					<td>2017-09-23</td>
-					<td>하하하</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td><span class="red">미완료</span></td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td>완료<a href="" class="btn_sm_skyBlue ml_3">수정</a></td>
-					<td>공급가</td>
-					<td>판매가</td>
-					<td>2017-09-23</td>
-					<td>하하하</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td><span class="red">미완료</span></td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td>완료<a href="" class="btn_sm_skyBlue ml_3">수정</a></td>
-					<td>공급가</td>
-					<td>판매가</td>
-					<td>2017-09-23</td>
-					<td>하하하</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td><span class="red">미완료</span></td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td>완료<a href="" class="btn_sm_skyBlue ml_3">수정</a></td>
-					<td>공급가</td>
-					<td>판매가</td>
-					<td>2017-09-23</td>
-					<td>하하하</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox"></td>
-					<td>유핏</td>
-					<td>2017.09</td>
-					<td><a href="" class="a_be">토마토</a></td>
-					<td><a href="" class="a_be">123-45-6789</a></td>
-					<td>월</td>
-					<td>정발행</td>
-					<td>포함</td>
-					<td>윤수지</td>
-					<td><span class="red">미완료</span></td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-					<td>-</td>
-				</tr>								
-			</tbody>
+			</@page.table>	
 		</table>
 		
 		<!-- paging -->
-		<div class="paging_b mb_10">
-			<span>
-				<button title="처음페이지" class="first" type="button">&lt;&lt;</button>
-				<button title="이전 10페이지" class="pre" type="button">&lt;</button> 
-			</span>
-			<span class="page">
-				<span class="here">1</span><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button">6</button><button type="button">7</button><button type="button">8</button><button type="button">9</button><button type="button">10</button> 
-			</span>
-			<span>       
-				<button title="다음 10페이지" class="next" type="button">&gt;</button>
-				<button title="마지막페이지" class="last" type="button">&gt;&gt;</button>
-			</span>
-		</div> 		
+		<@page.paging></@page.paging>
 		<!-- //paging -->
 		
 		<!-- 검색결과 (없을 시) list table -->
 		<table class="tb_list_b">
-			<colgroup>
-				<col style="width:4%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:10%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-				<col style="width:7%">
-			</colgroup>
-			<thead>
-				<tr>
-					<th><input type="checkbox"></th>
-					<th>서비스</th>
-					<th>정산연월</th>
-					<th>고객사명</th>
-					<th>사업자번호</th>
-					<th>정산주기</th>
-					<th>정/역발행</th>
-					<th>기타매출</th>
-					<th>담당자</th>
-					<th>정산완료여부</th>
-					<th>vat별도가</th>
-					<th>vat포함가</th>
-					<th>정산완료일자</th>
-					<th>정산담당자</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td colspan="14">검색 결과가 없습니다</td>
-				</tr>
-			</tbody>		
+		<@page.table count=14 thead= th number=2>
+		</@page.table>		
 		</table>
 		<!-- //검색결과 (없을 시) list table -->
 		

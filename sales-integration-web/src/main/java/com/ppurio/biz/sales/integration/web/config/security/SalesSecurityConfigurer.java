@@ -45,7 +45,11 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
         // @formatter:off
         auth.inMemoryAuthentication()
         .passwordEncoder(NoOpPasswordEncoder.getInstance())
+<<<<<<< HEAD
         .withUser("user1").password("dltnqls").roles("ADMIN");
+=======
+        .withUser("user1").password("dltnqls").roles("USER");
+>>>>>>> branch 'master' of https://github.com/sinbmn077/daou-sb.git
     }
     
     @Override

@@ -18,44 +18,33 @@ function detail(){
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>정산정보설정</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">정산관리</a> > <a href="">정산정보설정</a></blockquote>
-		</div>
+		 <@page.title mainti='정산정보설정' hr_ti='./account_accountinfoSet_tab1' ti='정산관리'
+		      hr_subti='./account_accountinfoSet_tab1' subti='정산정보설정'>   
+		 </@page.title>
 		<!-- //title -->
 		
 		<!-- tab -->
-		<ul class="tab_d">
-			<li><a class="active">정산정보현황</a></li>
-			<li><a href="./account_accountinfoSet_tab2">정산그룹관리</a></li>
-			<li><a href="./account_accountinfoSet_tab3">수기정산</a></li>
-			<li><a href="./account_accountinfoSet_tab4">기타매출</a></li>
-		</ul>		
+		<@page.account_tab_d></@page.account_tab_d>			
 		<!-- //tab -->	
 		
 		<!--  tab_정산정보현황 -->		
 		<!-- 검색 -->
-		<div class="box_grey">
-			<div class="form_group align_c ">
+		<@page.box_grey number=1 ph=''>
 				<select class="w200 mr_5">
 					<option value="1">검색조건 선택</option>
 				</select>
-				<input type="text" class="w200" placeholder="검색 내용 입력">
-				<a href="" class="btn_sm_sch_black r3">검색</a>
-			</div>
-		</div>
+		</@page.box_grey>		
 		<!-- //검색 -->
 		
 		<!-- button -->
 		<div class="align_l mb_10">
-			<a href="" class="btn md btn_gray" onclick="del()" >삭제</a>
+			<@page.button class="btn md btn_gray" text='삭제'></@page.button>
 		</div>
 		<!-- //button -->		
 		
 		<!-- 검색결과 list table -->
-		<@page.table count=10 col_group=['50','100','100','100','100','100','100','100','100','100','100','100'] 
-		thead=th number=1>
+		<table class="tb_list_b mt_15">
+		<@page.table count=10 thead=th number=1>
 			<tr>
 				<td><input type="checkbox"></td>
 				<td>비즈뿌리오</td>
@@ -71,13 +60,15 @@ function detail(){
 				<td>2018.12.25</td>
 			</tr>
 		</@page.table>	
+		</table>
 		<@page.paging></@page.paging>
 		<!-- //검색결과 list table -->
 		
 		<!-- 검색결과 (없을 시) list table -->
-		<@page.table count=10 col_group=['6.3','9.3','9.3','8.3','8.3','8.3','8.3','8.3','8.3','9.3','9.3','10.3'] 
-		thead= th number=2>
+		<table class="tb_list_b mt_15">
+		<@page.table count=12 thead= th number=2>
 		</@page.table>
+		</table>
 		<!-- //검색결과 (없을 시) list table -->
 		<!--  //tab_정산정보현황 -->
 	</div>
