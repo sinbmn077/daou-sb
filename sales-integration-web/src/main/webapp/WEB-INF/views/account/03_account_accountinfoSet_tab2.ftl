@@ -1,7 +1,10 @@
 <#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 정산관리' />
-<@page.account pageTitle>
+<@page.default pageTitle>
+	<!-- sidebar -->
+	<#include '/layout/account_side.ftl'>  
+    <!--//sidebar-->
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -11,14 +14,14 @@
 		<!-- //title -->
 		
 		<!-- tab -->
-		<@page.account_tab_d></@page.account_tab_d>		
+		<@page.account_tab_d></@page.account_tab_d>		   
 		<!-- //tab -->
 		
 		<!-- tab_정산그룹관리 -->
 		<div class="mt_15">
 			<h4 class="f_l">[정산그룹등록하기]</h4>
 			<div class="align_r">
-				<a href="" class="btn md btn_gray">목록</a>
+				<a href="./account_accountinfoSet_tab2_detail" class="btn md btn_gray">목록</a>
 			</div>			
 		</div>
 		
@@ -307,7 +310,7 @@
 		<!-- //paging -->	
 		
 		<!-- 검색결과 (없을 시) list table -->
-	    <table class="tb_list_b">
+	    <table class="tb_list_b mt_15">
 			<@page.table count=12 thead=['서비스','고객사명','사업자번호','정산주기','그룹명','정/역발행','발행일','절사여부','최저사용료','기타매출','담당자'] number=2>
 			</@page.table>
 		</table>			
@@ -370,4 +373,4 @@
 		<!-- //layer popup -->		
 	</div>
 	<!-- //contents -->
-	</@page.account>
+	</@page.default>

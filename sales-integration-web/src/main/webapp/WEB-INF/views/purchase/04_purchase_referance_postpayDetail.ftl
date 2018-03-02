@@ -1,7 +1,10 @@
 <#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 매출/매입관리' />
-<@page.purchase pageTitle>
+<@page.default pageTitle>
+   	<!-- sidebar -->
+	<#include '/layout/purchase_side.ftl'>  
+    <!--//sidebar-->
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -369,4 +372,4 @@
 		<!-- //수기 정산 일 때 -->
 	</div>
 	<!-- //contents -->
-	</@page.purchase>
+</@page.default>

@@ -2,29 +2,24 @@
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 정산관리' />
 <#assign th = ['서비스','정산연월','고객사명','사업자번호','정산주기','정/역발행','기타매출','담당자','정산완료여부','vat별도가','vat포함가','정산완료일자','정산담당자']/>
-<@page.account pageTitle>
+<@page.default pageTitle>
+	<!-- sidebar -->
+	<#include '/layout/account_side.ftl'>  
+    <!--//sidebar-->
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>정산정보설정</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">정산관리</a> > <a href="">정산정보설정</a></blockquote>
-		</div>
+	 	<@page.title mainti='정산정보설정' hr_ti='./account_accountinfoSet_tab1' ti='정산관리'
+		      hr_subti='./account_automaticTransfer' subti='정산정보설정'>   
+		 </@page.title>
 		<!-- //title -->
 		
 		<!-- tab -->
-		<ul class="tab_d">
-			<li><a href="./account_accountinfoSet_tab1">정산정보현황</a></li>
-			<li><a href="./account_accountinfoSet_tab2">정산그룹관리</a></li>
-			<li><a class="active">수기정산</a></li>
-			<li><a href="./account_accountinfoSet_tab4">기타매출</a></li>
-		</ul>		
+		<@page.account_tab_d></@page.account_tab_d>			
 		<!-- //tab -->
 				
 		<!-- 검색 -->
-		<div class="box_grey">
-			<div class="form_group align_c">		
+		<@page.box_grey number=1 ph ='검색 내용 입력'>	
 				<select class="w100">
 					<option>2017</option>
 				</select> 년
@@ -34,16 +29,13 @@
 				<select class="w200 mr_5">
 					<option value="1">검색조건 선택</option>
 				</select>
-				<input type="text" class="w200" placeholder="검색 내용 입력">
-				<a href="" class="btn_sm_sch_black r3">조회</a>
-			</div>
-		</div>
+		</@page.box_grey>
 		<!-- 검색 -->
 		
 		<!-- 버튼 -->
 		<div class="align_l mb_10">
-			<a href="" class="btn md btn_gray">삭제</a>
-			<a href="" class="btn md btn_blue">고객사 등록</a>
+			<@page.button class ="btn md btn_gray" text ='삭제'></@page.button>
+			<@page.button class ="btn md btn_blue" text ='고객사 등록'></@page.button>
 		</div>
 		<!-- //버튼 -->
 				
@@ -69,11 +61,11 @@
 		</table>
 		
 		<!-- paging -->
-		<@page.paging></@page.paging>
+		<@page.paging></@page.paging>                    
 		<!-- //paging -->
 		
 		<!-- 검색결과 (없을 시) list table -->
-		<table class="tb_list_b">
+		<table class="tb_list_b mt_15">
 		<@page.table count=14 thead= th number=2>
 		</@page.table>		
 		</table>
@@ -88,12 +80,7 @@
 
 		<!-- 조회 -->
 		<div class="box_b2">
-			<div class="box_grey">
-				<div class="form_group align_c">
-					<input type="text" class="w300" placeholder="Master ID/ 고객사명/ 사업자번호">
-					<a href="" class="btn_sm_sch_black r3">조회</a>
-				</div>
-			</div>
+			<@page.box_grey number=2 ph="MasterID/고객사명/사업자번호"></@page.box_grey>
 			<table class="tb_list_b p60 mar_auto">
 				<colgroup>
 					<col style="width:20%">
@@ -384,4 +371,4 @@
 	</div>
 	<!-- //contents -->
 </body>
-	</@page.account>
+	</@page.default>

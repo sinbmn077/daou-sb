@@ -5,17 +5,24 @@
  */
 package com.ppurio.biz.sales.integration.web.login.controller;
 
+import java.util.HashMap;
+import java.util.Vector;
+
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  *
@@ -33,13 +40,18 @@ public class LoginController {
     	 
         return "/login/form";
     }
-    @GetMapping("/logout.do")
-    String logout(){
-    	 logs.info("==> 로그인두");
+    /*
+    @GetMapping("/loginProc.do")
+    String loginProc(){
+    	 logs.info("==> 로그인프록");
     	 
         return "/login/form";
+    }*/
+    
+
     }
 
-}
+
+
 
 

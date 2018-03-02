@@ -32,21 +32,13 @@ public class SalesAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication auth) throws AuthenticationException {
-        
-		String user_id = (String)auth.getPrincipal();		
-		String user_pw = (String)auth.getCredentials();
-		
-		
-		logs.info("Welcome authenticate! {}", user_id + "/" + user_pw);
-		
-		// check whether user's credentials are valid.
-		// if false, throw new BadCredentialsException(messages.getMessage("AbstractUserDetailsAuthenticationProvider.badCredentials", "Bad credentials"));
-
+        logs.info(auth.getPrincipal()+"#3");
 		return null;
     }
 
     @Override
     public boolean supports(Class<?> type) {
+    	logs.info(UsernamePasswordAuthenticationToken.class+"");
         return type.equals(UsernamePasswordAuthenticationToken.class);
     }
     

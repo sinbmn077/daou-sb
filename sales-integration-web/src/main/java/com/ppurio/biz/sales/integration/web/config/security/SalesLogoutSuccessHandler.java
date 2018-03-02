@@ -31,6 +31,8 @@ public class SalesLogoutSuccessHandler implements LogoutSuccessHandler {
                                         throws IOException, ServletException {
         /** @TODO 관리자 접근로그(로그아웃) 기록 */
         logs.info("==> onLogoutSuccess");
+        //로그인페이지
+        response.sendRedirect("login.do");
     }
 
 }

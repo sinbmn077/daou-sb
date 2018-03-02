@@ -1,7 +1,10 @@
 <#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 영업관리' />
-<@page.sales pageTitle>
+<@page.default pageTitle>
+   	<!-- sidebar -->
+	<#include '/layout/sales_side.ftl'>  
+    <!--//sidebar-->
     <!-- contents -->
     <div class="container_r">
     	<!-- title -->
@@ -152,4 +155,4 @@
         <!-- //하단버튼 -->
 	</div>	
 	<!-- //contents -->        
-	</@page.sales>
+</@page.default>

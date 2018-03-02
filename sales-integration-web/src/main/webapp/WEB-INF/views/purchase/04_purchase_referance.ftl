@@ -1,7 +1,7 @@
 <#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 매출/매입관리' />
-<@page.purchase pageTitle>
+<@page.default pageTitle>
 
 <script>
 function detail(){
@@ -14,7 +14,9 @@ function detail(){
 
 }
 </script>
-
+   	<!-- sidebar -->
+	<#include '/layout/purchase_side.ftl'>  
+    <!--//sidebar-->
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -274,5 +276,5 @@ function detail(){
 		<!-- //paging -->				
 	</div>
 	<!-- //contents -->
-	</@page.purchase>
+	</@page.default>
 

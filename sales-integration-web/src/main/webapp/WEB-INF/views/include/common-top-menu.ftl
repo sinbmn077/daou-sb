@@ -10,7 +10,9 @@ $(document).ready(function(){
             submenu.slideDown();
         }
     });
+
 });
+
     
 //menu top
 $(function(){      
@@ -20,8 +22,10 @@ $(function(){
     $('ul:first',this).hide();
   });
 });
+
 </script>
-  
+ <form action="./logout.do" method="post" id="form1">
+
 	<!-- menuTop -->
     <div class="navbar_aa">
 		<div class="nav">
@@ -94,9 +98,9 @@ $(function(){
 					</ul>
 				</li>
 			</ul>
-			<form action="./logout.do" method="post" id="form1">
-			<div class="btn_box"><a href="javascript:;" onclick="document.getElementById('form1').submit();" class="logout">로그아웃</a></div>
-				</form>
+			<div class="btn_box">
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+			<a href="#" onclick="document.getElementById('form1').submit();" class="logout"> "${Session.id}"로그아웃</a></div>
 		</div>
     </div>
 	<!-- //menuTop -->

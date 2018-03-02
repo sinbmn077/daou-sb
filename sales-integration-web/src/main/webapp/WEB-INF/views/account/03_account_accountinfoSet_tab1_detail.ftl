@@ -2,7 +2,10 @@
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 정산관리' />
 <#assign th=['No.','계산서발행일','고객사 명','사업자번호','판매금액','부가세','합계금액','비고']/>
-<@page.account pageTitle>
+<@page.default pageTitle>
+	<!-- sidebar -->
+	<#include '/layout/account_side.ftl'>  
+    <!--//sidebar-->
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -118,15 +121,15 @@
 				</tr>
 			</@page.table>
 		</table>	
-		
+		<!-- //계산서 발행 내역이 있는 경우 -->	
 		<@page.paging></@page.paging>
 		
 		<!-- 계산서 발행 내역이 없는 경우 -->
-	    <table class="tb_list_b">
+	    <table class="tb_list_b mt_15">
 		<@page.table count=9 thead= th number=2>
 		</@page.table>
 		</table>	
 		<!-- //계산서 발행 내역이 없는 경우 -->						
 	</div>
 	<!-- //contents -->
-	</@page.account>
+	</@page.default>

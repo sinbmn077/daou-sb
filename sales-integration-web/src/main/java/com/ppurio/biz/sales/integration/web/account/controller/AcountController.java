@@ -79,6 +79,7 @@ public class AcountController {
     String accountinfoSet_tab2(){
         return "/account/03_account_accountinfoSet_tab2";
     }
+    //정산정보설정- 정산그룹관리- 목록
     @GetMapping("account_accountinfoSet_tab2_detail")
     String accountinfoSet_tab2_detail(){
         return "/account/03_account_accountinfoSet_tab2_detail";
@@ -116,6 +117,7 @@ public class AcountController {
     String postpay_accountList_group(){
         return "/account/03_account_postpay_accountList_group";
     }
+    //account_postpay_accountLisg_detail 이랑 똑같은파일
     @GetMapping("account_postpay_accountList_hand")
     String postpay_accountList_hand(){
         return "/account/03_account_postpay_accountList_hand";

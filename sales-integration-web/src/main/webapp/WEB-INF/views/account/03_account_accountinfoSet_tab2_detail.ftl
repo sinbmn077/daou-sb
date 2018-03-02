@@ -1,23 +1,20 @@
 <#import "/layout/page.ftl" as page>
-<#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 정산관리' />
-<@page.account pageTitle>
+<@page.default pageTitle>
+	<!-- sidebar -->
+	<#include '/layout/account_side.ftl'>  
+    <!--//sidebar-->
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>정산정보설정</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">정산관리</a> > <a href="">정산정보설정</a></blockquote>
-		</div>
+		 <@page.title mainti='정산정보설정' hr_ti='./account_accountinfoSet_tab1' ti='정산관리'
+		      hr_subti='./account_accountinfoSet_tab1' subti='정산정보설정'>   
+		 </@page.title>
 		<!-- //title -->
 		
 		<!-- tab -->
 		<ul class="tab_d">
-			<li><a>정산정보현황</a></li>
-			<li><a class="active">정산그룹관리</a></li>
-			<li><a>수기정산</a></li>
-			<li><a>기타매출</a></li>
+		<@page.account_tab_d></@page.account_tab_d>	
 		</ul>		
 		<!-- //tab -->
 		
@@ -216,5 +213,5 @@
 	<!-- //contents -->
 </body>
 </html>
-	</@page.account>
+	</@page.default>
 

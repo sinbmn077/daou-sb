@@ -1,7 +1,10 @@
 <#import "/layout/page.ftl" as page>
 <#-- @ftlvariable name="_csrf" type="org.springframework.security.web.csrf.CsrfToken" -->
 <#assign pageTitle='영업관리시스템 - 통계' />
-<@page.statistics pageTitle>
+<@page.default pageTitle>
+   	<!-- sidebar -->
+	<#include '/layout/statistics_side.ftl'>  
+    <!--//sidebar-->
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
@@ -1185,4 +1188,4 @@
 		<!-- //tab_증감 TOP 10 업체 -->
 	</div>
 	<!-- //contents -->
-	</@page.statistics>
+</@page.default>

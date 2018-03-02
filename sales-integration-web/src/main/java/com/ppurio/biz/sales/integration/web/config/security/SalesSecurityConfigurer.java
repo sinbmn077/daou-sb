@@ -45,11 +45,7 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
         // @formatter:off
         auth.inMemoryAuthentication()
         .passwordEncoder(NoOpPasswordEncoder.getInstance())
-<<<<<<< HEAD
         .withUser("user1").password("dltnqls").roles("ADMIN");
-=======
-        .withUser("user1").password("dltnqls").roles("USER");
->>>>>>> branch 'master' of https://github.com/sinbmn077/daou-sb.git
     }
     
     @Override
@@ -64,8 +60,9 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+
             .headers()
-                .frameOptions().disable()
+                .frameOptions().disable()        
                 .and()
             .csrf()
                 .ignoringAntMatchers("/webjars/**", "/css/**", "/js/**", "/images/**")
@@ -74,9 +71,10 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 //.antMatchers("/sub/**")
                 //.access("hasRole('USER') and hasIpAddress('192.168.1.0/24')")
                 //.anyRequest().fullyAuthenticated()
-//                .anyRequest().authenticated()
+            	//.anyRequest().authenticated()
                 .anyRequest().permitAll()
-                .and()                  
+                .anyRequest().hasRole("ADMIN")
+            	.and()                  
             .formLogin()
                 .loginPage("/login.do").permitAll()
                 .usernameParameter("empno")
@@ -88,7 +86,6 @@ public class SalesSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .and()
             .logout()
                 .logoutUrl("/logout.do")
-                .logoutSuccessUrl("/")
                 .logoutSuccessHandler(logoutSuccessHandler)
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID", "SESSION")
