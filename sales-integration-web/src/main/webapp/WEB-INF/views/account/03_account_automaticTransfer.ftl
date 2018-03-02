@@ -8,11 +8,9 @@
 	<!-- contents -->
 	<div class="container_r">    
 		<!-- title -->
-		<div class="title_b">
-			<em></em>
-			<h2>자동이체</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">정산관리</a> > <a href="">자동이체</a></blockquote>
-		</div>
+	 	<@page.title mainti='자동이체' hr_ti='./account_accountinfoSet_tab1' ti='정산관리'
+		      hr_subti='./account_automaticTransfer' subti='자동이체'>   
+		 </@page.title>
 		<!-- //title -->
 		
 		<!-- button -->

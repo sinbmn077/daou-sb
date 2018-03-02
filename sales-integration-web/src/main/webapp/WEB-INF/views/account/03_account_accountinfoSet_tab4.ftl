@@ -8,21 +8,14 @@
     <!-- contents -->
     <div class="container_r">    
     	<!-- title -->
-    	<div class="title_b">
-    		<em></em>
-    		<h2>정산정보설정</h2>
-			<blockquote class="txt_bul_bar"><a href="">홈</a> > <a href="">정산관리</a> > <a href="">정산정보설정</a></blockquote>
-		</div>
+		 <@page.title mainti='정산정보설정' hr_ti='./account_accountinfoSet_tab1' ti='정산관리'
+		      hr_subti='./account_accountinfoSet_tab1' subti='정산정보설정'>   
+		 </@page.title>
 		<!-- //title -->
 		
 		<!-- tab -->
-		<ul class="tab_d">
-			<li><a href="./account_accountinfoSet_tab1">정산정보현황</a></li>
-			<li><a href="./account_accountinfoSet_tab2">정산그룹관리</a></li>
-			<li><a href="./account_accountinfoSet_tab3">수기정산</a></li>
-			<li><a class="active">기타매출</a></li>
-		</ul>		
-		<!-- //tab -->
+		<@page.account_tab_d></@page.account_tab_d>			
+		<!-- //tab -->	
 		
 		<!-- 검색 -->
 		<@page.box_grey number=1 ph=''>
